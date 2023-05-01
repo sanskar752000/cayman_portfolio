@@ -17,10 +17,10 @@
 
     <header class="page-header" role="banner">
       {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" style="float: left;"/>
+          <img src="{{site.logo | relative_url}}" alt="Logo" style="float: left; width: 14%;"/>
       {% endif %}
-      <h1 class="project-name">{{ page.title }}</h1>
-      <h2 class="project-tagline">{{ page.description }}</h2>
+      <h1 class="project-name">{{ site.title }}</h1>
+      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
       {% if site.github.is_project_page %}
         <a href="https://github.com/sanskar752000/cayman_portfolio" class="btn">View on GitHub</a>
       {% endif %}
